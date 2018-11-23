@@ -1,0 +1,41 @@
+.facts
+    padding-top: 58px
+    &__inner
+        padding: 0px 97px
+    &__title
+        color: rgb(56, 56, 56)
+        margin-bottom: 67px
+    &-item
+        &__title
+            +hn-r
+            font-size: 30px
+            color: rgb(56, 56, 56)
+            line-height: 1.2
+            border-bottom: 2px solid $mainColor
+            margin-right: 47px
+            margin-bottom: 40px
+            position: relative
+            span
+                font-size: 48px
+                color: $mainColor
+                +PT-i
+                margin-right: 9px
+        &__number
+            +hn-b
+            font-size: 155px
+            color: rgba(56, 56, 56, 0.102)
+            line-height: 1em
+            position: absolute
+            top: -45px
+            left: -23px
+        &__text
+            p
+                +paragraph
+                margin-bottom: 23px
+                text-indent: initial
+            span
+                +PT-i
+                font-size: 20px
+                text-indent: 18px
+                display: block
+
