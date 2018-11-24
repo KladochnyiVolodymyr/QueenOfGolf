@@ -1,42 +1,29 @@
+{% import "../data/data.html" as list %}
 <div class="facts">
     <div class="container">
         <div class="facts__inner">
             <h2 class="facts__title block-title">Here are 8 amazing facts about Wangari…</h2>
             <div class="facts-list">
-                <div class="facts-item">
-                    <div class="facts-item__title">
-                        <span>Eight</span> Wangari does all the things eight year old’s do
-                        <div class="facts-item__number">8</div>
+                {% for item in list.facts %}
+                    <div class="facts-item">
+                        <div class="facts-item__title">
+                            <span>{{item.numberText}}</span> {{item.title}}
+                            <div class="facts-item__number">{{item.number}}</div>
+                        </div>
+                        <div class="facts-text container-sm">
+                            {% for text in item.content %}
+                                <div class="facts-text-item">
+                                    <p>{{text.paragraph | safe }}</p>
+                                    <div class="facts-text-item__quote">
+                                        <p>{{text.beforeQuote}}</p>
+                                        <span>{{text.quote}}</span>
+                                        <p>{{text.authorQuote}}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
-                    <div class="facts-item__text container-sm">
-                        <p>She goes to class during the week and has homework which she endeavors to finish by Friday afternoon so she can play golf.</p>
-                        <span>
-                            “It is a lot of running, we have to make it to practice a bunch of times in a week. There are a lot of early mornings and cramped schedules, especially ahead of a big tournament, but Chanelle loves golf, which makes it all worth it,” 
-                            <p>says Maureen Wangari, Chanelle’s mother.</p>
-                        </span>
-                        <p>Wangari says she enjoys school very much.</p>
-                        <span>
-                            “I love math, numbers are really fun. They help me with golf, you can see how you’re doing in the game, just by using math problems.”  
-                        </span>
-                    </div>
-                </div>
-                <div class="facts-item">
-                    <div class="facts-item__title">
-                        <span>Seven</span> Wangari does all the things eight year old’s do
-                        <div class="facts-item__number">7</div>
-                    </div>
-                    <div class="facts-item__text container-sm">
-                        <p>She goes to class during the week and has homework which she endeavors to finish by Friday afternoon so she can play golf.</p>
-                        <span>
-                            “It is a lot of running, we have to make it to practice a bunch of times in a week. There are a lot of early mornings and cramped schedules, especially ahead of a big tournament, but Chanelle loves golf, which makes it all worth it,” 
-                            <p>says Maureen Wangari, Chanelle’s mother.</p>
-                        </span>
-                        <p>Wangari says she enjoys school very much.</p>
-                        <span>
-                            “I love math, numbers are really fun. They help me with golf, you can see how you’re doing in the game, just by using math problems.”  
-                        </span>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
