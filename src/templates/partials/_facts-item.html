@@ -1,0 +1,11 @@
+{% macro factsItem(title, number, numberText, content) %}
+<div class="facts-item">
+    <div class="facts-item__title">
+        <span>{{numberText}}</span>{{title}}
+        <div class="facts-item__number">{{number}}</div>
+    </div>
+    <div class="facts__text container-sm">
+        {{content}}
+    </div>
+</div>
+{% endmacro %}

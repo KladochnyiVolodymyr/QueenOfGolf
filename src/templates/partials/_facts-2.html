@@ -1,0 +1,13 @@
+{% import "../data/data.html" as list %}
+{% import "partials/_facts-item.html" as factsItem %}
+<div class="facts">
+    <div class="container">
+        <div class="facts__inner">
+            <div class="facts-list">
+                {% for item in list.facts_2 %}
+                    {{ factsItem.factsItem(item.title, item.number, item.numberText, item.content | safe)}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
