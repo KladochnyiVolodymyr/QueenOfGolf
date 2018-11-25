@@ -1,23 +1,27 @@
 import Swiper from 'swiper';
 
-var mySwiper = new Swiper ('.swiper-container', {
+var sliderSingleImg = new Swiper ('.js-slider-single-img', {
   // Optional parameters
   loop: true,
+  centeredSlides: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
 
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
 
+var sliderDoubleImg = new Swiper ('.js-slider-double-img', {
+  // Optional parameters
+  loop: true,
+  centeredSlides: true,
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

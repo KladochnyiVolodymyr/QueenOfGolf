@@ -1,0 +1,18 @@
+{% import "../data/data.html" as list %}
+<div class="slider-block">
+    <div class="container">
+        <div class="slider swiper-container js-slider-double-img">
+            <div class="slider__slides swiper-wrapper">
+                {% for slide in list.slider_double_img %}
+                    <div class="slide swiper-slide">
+                        <img class="slide__img" src="{{slide.src}}">
+                        <p class="slide__description">{{slide.description}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="slider__arrow swiper-button-prev swiper-button-white"></div>
+            <div class="slider__arrow swiper-button-next swiper-button-white"></div>
+        </div>
+    </div>
+</div>
