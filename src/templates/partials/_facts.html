@@ -10,17 +10,8 @@
                             <span>{{item.numberText}}</span> {{item.title}}
                             <div class="facts-item__number">{{item.number}}</div>
                         </div>
-                        <div class="facts-text container-sm">
-                            {% for text in item.content %}
-                                <div class="facts-text-item">
-                                    <p>{{text.paragraph | safe }}</p>
-                                    <div class="facts-text-item__quote">
-                                        <p>{{text.beforeQuote}}</p>
-                                        <span>{{text.quote}}</span>
-                                        <p>{{text.authorQuote}}</p>
-                                    </div>
-                                </div>
-                            {% endfor %}
+                        <div class="facts__text container-sm">
+                            {{item.content | safe }}
                         </div>
                     </div>
                 {% endfor %}

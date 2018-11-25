@@ -29,18 +29,15 @@
             position: absolute
             top: -45px
             left: -23px
-    &-text
-        &-item
+    &__text
+        p
+            +paragraph
+            text-indent: initial
             margin-bottom: 25px
-            p
-                +paragraph
-                text-indent: initial
-            &__quote
-                span
-                    +PT-i
-                    font-size: 20px
-                    text-indent: 18px
-                    display: block
-                p
-                    margin-bottom: 0px
-
+            &:nth-child(even)
+                text-indent: 18px
+        q
+            +PT-i
+            font-size: 20px
+            &:before
+                content: ' '
