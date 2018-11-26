@@ -7,6 +7,10 @@
     &__title
         color: rgb(56, 56, 56)
         margin-bottom: 67px
+        +r(600)
+            font-size: 28px
+        +r(420)
+            font-size: 25px
     &-item
         margin-bottom: 73px
         &:last-child
@@ -20,12 +24,22 @@
             margin-right: 47px
             margin-bottom: 40px
             position: relative
+            +r(900)
+                font-size: 25px
+                margin-right: 0px
+            +r(420)
+                font-size: 22px
             span
                 font-size: 48px
                 color: $mainColor
                 +PT-i
                 min-width: 122px
                 display: inline-block
+                +r(900)
+                    font-size: 35px
+                +r(420)
+                    font-size: 30px
+                    min-width: 80px
         &__number
             +hn-b
             font-size: 155px
@@ -34,6 +48,12 @@
             position: absolute
             top: -45px
             left: -23px
+            +r(900)
+                font-size: 120px
+            +r(700)
+                left: -15px
+            +r(420)
+                font-size: 100px
     &__text
         p
             +paragraph
@@ -43,6 +63,5 @@
                 text-indent: 18px
         q
             +PT-i
-            font-size: 20px
             &:before
                 content: ' '
