@@ -67,6 +67,7 @@
     "lodash": "^4.3.0"
   },
   "dependencies": {
+    "svg4everybody": "^2.1.9",
     "swiper": "^4.4.2"
   }
 }

@@ -1,27 +1,4 @@
-import Swiper from 'swiper';
+import svg4everybody from 'svg4everybody';
+import './components/sliders.js';
 
-var sliderSingleImg = new Swiper ('.js-slider-single-img', {
-  // Optional parameters
-  loop: true,
-  centeredSlides: true,
-
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-var sliderDoubleImg = new Swiper ('.js-slider-double-img', {
-  // Optional parameters
-  loop: true,
-  centeredSlides: true,
-
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+svg4everybody();
