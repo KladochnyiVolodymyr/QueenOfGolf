@@ -14,10 +14,21 @@
             top: 50%
 .slide
     text-align: center
+    &__img-wrap
+        height: 536px
+        margin-bottom: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        +r(800)
+            height: 400px
+        +r(600)
+            height: 300px
+        +r(380)
+            height: 200px
     &__img
         max-height: 530px
         max-width: 1030px
-        margin-bottom: 25px
         +r(1200)
             max-width: 100%
             max-height: 100%
