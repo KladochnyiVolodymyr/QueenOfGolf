@@ -84,17 +84,21 @@ function createConfig(env) {
             cache: true,
             ignorePattern: __dirname + '/src/js/lib/'
           }
-        }, {
+        }, 
+        {
           test: /\.js$/,
           loader: 'babel-loader',
-          exclude: [
-            path.resolve(__dirname, 'node_modules'),
-          ],
+          exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
         },
         {
             test: /\.glsl$/,
             loader: 'webpack-glsl-loader'
-        }],
+        },
+        {
+          test: require.resolve("svg4everybody"),
+          loader: "imports-loader?this=>window"
+        }
+      ],
     },
   };
 
